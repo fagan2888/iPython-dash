@@ -46,7 +46,7 @@ def add_urls():
   for link in soup.findAll('a'):
     name = link.text.strip()
     path = link.get('href')
-    if path is not None and name and not path.startswith('http') and not path.startswith('//') and not path.startswith('github-') and not path.startswith('#'):
+    if path is not None and name and not path.startswith('http') and not path.startswith('/') and not path.startswith('github-') and not path.startswith('#'):
         update_db(name, path)
 
 
